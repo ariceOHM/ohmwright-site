@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ohmwright | Electrical Drafting &amp; Design Production for Engineering Firms</title>
+<meta name="description" content="Ohmwright produces electrical drawing sets in AutoCAD and Revit for engineering firms: power and lighting plans, one-lines, panel schedules and Revit sheets, in your templates and your Revit version.">
+<meta property="og:title" content="Ohmwright | Electrical Drafting & Design Production">
+<meta property="og:description" content="Electrical drawing sets in AutoCAD and Revit, produced in your standards, under your engineer's direction.">
+<meta property="og:image" content="https://ohmwright.com/assets/ohmwright-logo.png">
+<meta property="og:url" content="https://ohmwright.com/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#1F2A44; --navy-2:#2A3757; --copper:#C2672B; --copper-dk:#A5541F;
+    --ink:#1F2A44; --muted:#5B6474; --line:#E3E6EC; --bg:#FFFFFF; --soft:#F5F6F8;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  a{color:var(--copper-dk)}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  /* header */
+  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+  .nav img{height:40px;display:block}
+  .nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0;align-items:center}
+  .nav ul a{color:var(--ink);text-decoration:none;font-weight:500;font-size:15px}
+  .nav ul a:hover{color:var(--copper)}
+  .btn{display:inline-block;background:var(--copper);color:#fff !important;text-decoration:none;font-weight:600;padding:12px 22px;border-radius:8px;font-size:15px;transition:background .15s}
+  .btn:hover{background:var(--copper-dk)}
+  .btn.ghost{background:transparent;color:var(--navy) !important;border:1.5px solid var(--navy)}
+  .btn.ghost:hover{background:var(--navy);color:#fff !important}
+  /* hero */
+  .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;
+    background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);
+    background-size:32px 32px}
+  .hero .wrap{position:relative;padding:96px 24px 104px}
+  .eyebrow{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#E08A4F;margin:0 0 18px}
+  .hero h1{font-size:clamp(34px,5vw,54px);line-height:1.12;font-weight:800;margin:0 0 22px;max-width:760px;letter-spacing:-.01em}
+  .hero p.lead{font-size:clamp(17px,2vw,20px);color:#D3D8E2;max-width:640px;margin:0 0 34px}
+  .hero .ctas{display:flex;gap:14px;flex-wrap:wrap}
+  .hero .btn.ghost{color:#fff !important;border-color:rgba(255,255,255,.6)}
+  .hero .btn.ghost:hover{background:#fff;color:var(--navy) !important}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:44px}
+  .chip{font-size:13px;font-weight:500;color:#C7CCD6;border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:6px 14px}
+  /* sections */
+  section{padding:88px 0}
+  section.alt{background:var(--soft)}
+  h2{font-size:clamp(28px,3.4vw,38px);line-height:1.2;margin:0 0 14px;font-weight:800;letter-spacing:-.01em}
+  .sub{color:var(--muted);font-size:18px;max-width:680px;margin:0 0 48px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:28px}
+  .card h3{margin:14px 0 8px;font-size:18px;font-weight:700}
+  .card p{margin:0;color:var(--muted);font-size:15.5px}
+  .ico{width:44px;height:44px;border-radius:10px;background:#FBEFE6;display:grid;place-items:center}
+  .ico svg{width:24px;height:24px;stroke:var(--copper);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
+  .step{position:relative;padding-top:58px}
+  .step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:42px;height:42px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;display:grid;place-items:center}
+  .step h3{margin:0 0 8px;font-size:18px}
+  .step p{margin:0;color:var(--muted);font-size:15.5px}
+  /* fit list */
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+  .checks{list-style:none;padding:0;margin:0}
+  .checks li{padding:14px 0 14px 36px;border-bottom:1px solid var(--line);position:relative;font-size:16px}
+  .checks li::before{content:"";position:absolute;left:4px;top:19px;width:16px;height:9px;border-left:2.5px solid var(--copper);border-bottom:2.5px solid var(--copper);transform:rotate(-45deg)}
+  .checks li strong{display:block}
+  .checks li span{color:var(--muted);font-size:15px}
+  .panel{background:var(--navy);color:#fff;border-radius:14px;padding:34px}
+  .panel h3{margin:0 0 12px;font-size:20px}
+  .panel p{color:#D3D8E2;margin:0 0 14px;font-size:15.5px}
+  .panel .tag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:#E08A4F;margin-bottom:10px}
+  /* contact */
+  .contact{text-align:center}
+  .contact .sub{margin:0 auto 34px}
+  .contact .ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .contact .mail{display:block;margin-top:22px;font-size:17px;font-weight:600;color:var(--navy);text-decoration:none}
+  /* footer */
+  footer{background:var(--navy);color:#AEB5C2;font-size:13.5px}
+  footer .wrap{padding:36px 24px;display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;align-items:center}
+  footer img{height:34px}
+  footer p{margin:0;max-width:620px}
+  @media (max-width:900px){
+    .grid3{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr 1fr}
+    .two{grid-template-columns:1fr;gap:36px}
+    .nav ul li.link{display:none}
+  }
+  @media (max-width:560px){
+    .grid3,.steps{grid-template-columns:1fr}
+    .wrap{padding:0 16px}
+    .hero .wrap{padding:64px 16px 72px}
+    section{padding:64px 0}
+    .nav img{height:32px}
+    .nav .btn{padding:10px 14px;font-size:14px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" aria-label="Ohmwright home"><img src="/assets/ohmwright-logo.svg" alt="Ohmwright: Electrical Design Production"></a>
+    <ul>
+      <li class="link"><a href="#services">Services</a></li>
+      <li class="link"><a href="#process">How it works</a></li>
+      <li class="link"><a href="#fit">Why Ohmwright</a></li>
+      <li><a class="btn" href="#contact">Book a call</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Electrical drafting for engineering firms</p>
+    <h1>Electrical drawing sets, produced in your standards.</h1>
+    <p class="lead">Send markups or design direction. Get back finished AutoCAD and Revit sheets in your templates, your Revit version, on your schedule, so your engineers can stay on engineering.</p>
+    <div class="ctas">
+      <a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1hppIDfHQrQ-OwlBRschxoQb05pvsZWXCNQFoXxgdXwkfzptIkl-NW3wgZScLKl_gAscL-khL6" target="_blank" rel="noopener">Book a 30-min intro call</a>
+      <a class="btn ghost" href="mailto:arice@ohmwright.com?subject=Drafting%20help">Email us</a>
+    </div>
+    <div class="chips">
+      <span class="chip">AutoCAD</span><span class="chip">Revit MEP</span><span class="chip">Your templates &amp; title blocks</span><span class="chip">US-based</span>
+    </div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="wrap">
+    <h2>What we produce</h2>
+    <p class="sub">Electrical construction documents and production support for MEP and electrical engineering firms, as one-off overflow help or an ongoing extension of your team.</p>
+    <div class="grid3">
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M9 21V9"/></svg></div>
+        <h3>Power &amp; lighting plans</h3>
+        <p>Receptacle, equipment, and lighting layouts with circuiting, tags and notes, drafted from your engineer's markups.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 2v6M12 16v6M6 8h12v8H6zM9 12h6"/></svg></div>
+        <h3>One-line &amp; riser diagrams</h3>
+        <p>Single-line diagrams, power and systems risers, and grounding details, clean and consistent across the set.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="18" rx="1"/><path d="M4 8h16M4 13h16M12 8v13"/></svg></div>
+        <h3>Panel schedules</h3>
+        <p>Panelboard and equipment schedules built from your engineer's data, coordinated with the plans.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
+        <h3>Revit models &amp; sheets</h3>
+        <p>Electrical modeling, views, and sheet production in your Revit version. We never upgrade a model without approval.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16v4z"/><path d="M13 7l4 4"/></svg></div>
+        <h3>Redline pickup &amp; revisions</h3>
+        <p>Turn review comments, addenda and ASI markups into updated sheets quickly, with clouds and deltas done right.</p>
+      </div>
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-6 7 6v11"/><path d="M10 21v-6h4v6"/></svg></div>
+        <h3>Shop drawings &amp; as-builts</h3>
+        <p>Drawing support for design-build electrical contractors: shop drawings, field-verified as-builts, and record sets.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="alt">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">A simple handoff that fits the way your firm already works.</p>
+    <div class="steps">
+      <div class="step"><h3>Send the package</h3><p>Markups, design direction, your template or model, and the due date.</p></div>
+      <div class="step"><h3>We draft in your standards</h3><p>Your title blocks, layers, families and CAD standards, with a QC check before anything comes back.</p></div>
+      <div class="step"><h3>Your engineer reviews</h3><p>Your PE directs the design and remains engineer of record. We handle production.</p></div>
+      <div class="step"><h3>Revise &amp; deliver</h3><p>Defined revision rounds and fast turnaround, delivered as DWG, RVT and PDF.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap two">
+    <div>
+      <h2>Built to fit your process</h2>
+      <p class="sub" style="margin-bottom:24px">Overflow help shouldn't create more work for your team.</p>
+      <ul class="checks">
+        <li><strong>Your standards, not ours</strong><span>Templates, title blocks, layer standards and families, matched sheet for sheet.</span></li>
+        <li><strong>Your Revit version</strong><span>We work in the version your project is on. No surprise upgrades.</span></li>
+        <li><strong>Electrical engineering background</strong><span>Drafting by someone who understands what the drawings mean.</span></li>
+        <li><strong>Confidential by default</strong><span>Your clients and project files stay yours. NDA on request.</span></li>
+        <li><strong>US-based, same time zone</strong><span>Central time, quick replies, no overnight handoffs.</span></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <span class="tag">A good fit if</span>
+      <h3>Your workload is ahead of your staff</h3>
+      <p>You're a 5–50 person MEP or electrical firm with a deadline coming up, an open drafter position, or more redlines than hands.</p>
+      <p>Start with a small trial sheet or two. If it works, keep us on call for the next project.</p>
+      <a class="btn" href="#contact" style="margin-top:8px">Start a trial job</a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="alt contact">
+  <div class="wrap">
+    <h2>Have a set that needs to get out the door?</h2>
+    <p class="sub">Book a quick intro call or send a note with what you're working on. Sample sheets are available on request.</p>
+    <div class="ctas">
+      <a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1hppIDfHQrQ-OwlBRschxoQb05pvsZWXCNQFoXxgdXwkfzptIkl-NW3wgZScLKl_gAscL-khL6" target="_blank" rel="noopener">Book a 30-min intro call</a>
+      <a class="btn ghost" href="mailto:arice@ohmwright.com?subject=Sample%20sheets%20request">Request sample sheets</a>
+    </div>
+    <a class="mail" href="mailto:arice@ohmwright.com">arice@ohmwright.com</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="/assets/ohmwright-logo-white.svg" alt="Ohmwright">
+    <p>Ohmwright provides drafting and design-production services to engineering firms. All engineering decisions are made and directed by the client's licensed engineer of record. Ohmwright does not offer professional engineering services.<br>© 2026 Ohmwright</p>
+  </div>
+</footer>
+
+</body>
+</html>
