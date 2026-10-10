@@ -60,6 +60,16 @@
   .card p{margin:0;color:var(--muted);font-size:15.5px}
   .ico{width:44px;height:44px;border-radius:10px;background:#FBEFE6;display:grid;place-items:center}
   .ico svg{width:24px;height:24px;stroke:var(--copper);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  /* sample work */
+  .work{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+  .work a{display:block;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;transition:box-shadow .15s,transform .15s}
+  .work a:hover{box-shadow:0 10px 28px rgba(31,42,68,.12);transform:translateY(-2px)}
+  .work img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;border-bottom:1px solid var(--line)}
+  .work .cap{padding:16px 20px}
+  .work .cap b{color:var(--copper-dk);margin-right:8px}
+  .work .cap span{display:block;color:var(--muted);font-size:14.5px}
+  .work-cta{display:flex;gap:14px;align-items:center;flex-wrap:wrap;margin-top:30px}
+  .work-cta small{color:var(--muted);font-size:14px}
   /* steps */
   .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:s}
   .step{position:relative;padding-top:58px}
@@ -89,6 +99,7 @@
   footer p{margin:0;max-width:620px}
   @media (max-width:900px){
     .grid3{grid-template-columns:1fr 1fr}
+    .work{grid-template-columns:1fr}
     .steps{grid-template-columns:1fr 1fr}
     .two{grid-template-columns:1fr;gap:36px}
     .nav ul li.link{display:none}
@@ -110,6 +121,7 @@
     <a href="#top" aria-label="Ohmwright home"><img src="/assets/ohmwright-logo.svg" alt="Ohmwright: Electrical Design Production"></a>
     <ul>
       <li class="link"><a href="#services">Services</a></li>
+      <li class="link"><a href="#work">Sample work</a></li>
       <li class="link"><a href="#process">How it works</a></li>
       <li class="link"><a href="#fit">Why Ohmwright</a></li>
       <li><a class="btn" href="#contact">Book a call</a></li>
@@ -172,7 +184,24 @@
   </div>
 </section>
 
-<section id="process" class="alt">
+<section id="work" class="alt">
+  <div class="wrap">
+    <h2>Sample work</h2>
+    <p class="sub">A four-sheet electrical set for a fictional dental clinic, drafted to standard conventions and checked so the plans and schedules agree.</p>
+    <div class="work">
+      <a href="/Ohmwright_Portfolio.pdf#page=2" target="_blank" rel="noopener"><img src="/assets/sample-e101.jpg" alt="E-101 lighting plan sample sheet" loading="lazy"><div class="cap"><b>E-101</b>Lighting Plan<span>Fixture layout, switching, circuiting and fixture schedule</span></div></a>
+      <a href="/Ohmwright_Portfolio.pdf#page=3" target="_blank" rel="noopener"><img src="/assets/sample-e201.jpg" alt="E-201 power plan sample sheet" loading="lazy"><div class="cap"><b>E-201</b>Power Plan<span>Receptacles, GFI locations, equipment connections and schedule</span></div></a>
+      <a href="/Ohmwright_Portfolio.pdf#page=4" target="_blank" rel="noopener"><img src="/assets/sample-e601.jpg" alt="E-601 one-line diagram sample sheet" loading="lazy"><div class="cap"><b>E-601</b>One-Line Diagram<span>Service, distribution, feeders and connected-load summary</span></div></a>
+      <a href="/Ohmwright_Portfolio.pdf#page=5" target="_blank" rel="noopener"><img src="/assets/sample-e602.jpg" alt="E-602 panel schedules sample sheet" loading="lazy"><div class="cap"><b>E-602</b>Panel Schedules<span>MDP, LP-A and LP-B with phase loading, coordinated with the plans</span></div></a>
+    </div>
+    <div class="work-cta">
+      <a class="btn" href="/Ohmwright_Portfolio.pdf" target="_blank" rel="noopener">Download the sample set (PDF)</a>
+      <small>Fictional sample project. Design values are illustrative only.</small>
+    </div>
+  </div>
+</section>
+
+<section id="process">
   <div class="wrap">
     <h2>How it works</h2>
     <p class="sub">A simple handoff that fits the way your firm already works.</p>
@@ -185,7 +214,7 @@
   </div>
 </section>
 
-<section id="fit">
+<section id="fit" class="alt">
   <div class="wrap two">
     <div>
       <h2>Built to fit your process</h2>
@@ -208,13 +237,13 @@
   </div>
 </section>
 
-<section id="contact" class="alt contact">
+<section id="contact" class="contact">
   <div class="wrap">
     <h2>Have a set that needs to get out the door?</h2>
-    <p class="sub">Book a quick intro call or send a note with what you're working on. Sample sheets are available on request.</p>
+    <p class="sub">Book a quick intro call or send a note with what you're working on.</p>
     <div class="ctas">
       <a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1hppIDfHQrQ-OwlBRschxoQb05pvsZWXCNQFoXxgdXwkfzptIkl-NW3wgZScLKl_gAscL-khL6" target="_blank" rel="noopener">Book a 30-min intro call</a>
-      <a class="btn ghost" href="mailto:arice@ohmwright.com?subject=Sample%20sheets%20request">Request sample sheets</a>
+      <a class="btn ghost" href="mailto:arice@ohmwright.com?subject=Drafting%20help">Email us</a>
     </div>
     <a class="mail" href="mailto:arice@ohmwright.com">arice@ohmwright.com</a>
   </div>
